@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.userInfo, .userFlow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.userimage {
+    width: 200px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.username, .repo {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.username {
+    font-size: 1.8em;
+}
+
+.repo {
+    font-size: 1.5em;
+}
+
+.userbio {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.secondDiv {
+    display: flex;
+    flex-direction: column;
+    background-color: #c9fcb0;
+    width: 90%;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.secondDivHidden {
+    display: none;
+}
+
+.follower {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.visit {
+    background-color: #c0b324;
+    border-radius: 30px;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.visit:hover {
+    background-color: #b29b20;
+    transform: scale(1.05);
+}
+
+input, button {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 300px;
+    border: 2px solid #ddd;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+button {
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .userimage {
+        width: 150px;
+    }
+
+    .secondDiv {
+        width: 100%;
+    }
+
+    .follower {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .username {
+        font-size: 1.5em;
+    }
+
+    .repo {
+        font-size: 1.2em;
+    }
+
+    .visit {
+        width: 90%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
